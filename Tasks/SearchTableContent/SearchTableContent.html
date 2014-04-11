@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Search Table Content</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js" type="text/javascript"></script>
+	<script>
+			var app=angular.module('MyTutorialApp',[]);
+			app.controller("MainController", function($scope){
+				$scope.people = [
+					{"name":"Srinivasarao","Designation":"software Engineer"},
+					{"name":"Tagore","Designation":"software Engineer"},
+					{"name":"Surya","Designation":"Team Lead"},
+					{"name":"Natraj","Designation":"software Engineer"},
+					{"name":"Sai","Designation":"Proffesor"},
+					{"name":"Sundhar","Designation":"student"},
+					{"name":"Ganesh","Designation":"Postal Department"},
+					{"name":"Tulasi","Designation":"Advocate"},
+					{"name":"Nagarjuna","Designation":"Press"},
+					{"name":"Harsha","Designation":"Advocate"},
+					{"name":"Ashok","Designation":"Team Lead"}
+				]
+			});
+	</script>
+</head>
+<body>
+	<div id='content' ng-app='MyTutorialApp' ng-controller='MainController'>
+		Search:  <input type='text' ng-model='searchText'/>
+		<table>
+			<tr>
+				<td><font size=5>Name</font></td>
+				<td><font size=5>Designation</font></td>
+			</tr>
+			<tr ng-repeat="data in people | filter:searchText">
+				<td>{{data.name}}</td>
+				<td>{{data.Designation}}</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
