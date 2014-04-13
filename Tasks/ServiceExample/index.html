@@ -1,0 +1,19 @@
+<!doctype html>
+<html data-ng-app="MyTutorialApp">
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+	<script src="app.js"></script>
+	<script src="maincontroller.js"></script>
+</head>
+<body>
+	<div ng-controller="MainController">
+        Enter a number:
+        <input type="number" ng-model="number" />
+        <button ng-click="doSquare()">X<sup>2</sup></button>
+        <button ng-click="doCube()">X<sup>3</sup></button>
+        
+        <div>Answer: {{answer}}</div>
+    </div>
+</div>
+</body>
+</html>
