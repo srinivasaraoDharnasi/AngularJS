@@ -6,7 +6,7 @@ app.directive('googlePlacesone', function(){
                     replace:true,
                     // transclude:true,
                     scope: {location:'='},
-                    template: '<input id="google_places_ac" name="google_places_ac" type="text" class="input-block-level"/>',
+                    template: '<input id="google_places_ac" name="google_places_ac" type="text" class="input-block-level" placeholder="Enter source"/>',
                     link: function($scope, elm, attrs){
                         var autocomplete = new google.maps.places.Autocomplete($("#google_places_ac")[0], {});
                         google.maps.event.addListener(autocomplete, 'place_changed', function() {
@@ -20,15 +20,15 @@ app.directive('googlePlacesone', function(){
 			
 			
 			
-app.directive('googlePlacestwo', function(){
+			app.directive('googlePlacestwo', function(){
                 return {
                     restrict:'E',
                     replace:true,
                     // transclude:true,
                     scope: {locationdestination:'='},
-                    template: '<input id="google_places_ac" name="google_places_ac" type="text" class="input-block-level"/>',
+                    template: '<input id="google_places_ac2" name="google_places_ac" type="text" class="input-block-level" placeholder="Enter Destination"/>',
                     link: function($scope, elm, attrs){
-                        var autocomplete = new google.maps.places.Autocomplete($("#google_places_ac")[0], {});
+                        var autocomplete = new google.maps.places.Autocomplete($("#google_places_ac2")[0], {});
                         google.maps.event.addListener(autocomplete, 'place_changed', function() {
                             var place = autocomplete.getPlace();
                             $scope.locationdestination = place.geometry.location.lat() + ',' + place.geometry.location.lng();
