@@ -1,0 +1,22 @@
+html,body,#map-canvas {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#theMap {
+    width:100%;
+    height:650px;
+    background:#ccc;
+    margin: 5px 0;
+}
+.mapContainer {
+    width:100%;
+    margin:5px;
+}
+img {
+    max-width: none;
+}
+#wrongAddress {
+    display:none;
+}
