@@ -2,8 +2,6 @@
 <html xmlns:ng="http://angularjs.org" data-ng-app="angular-google-maps">
 <head>
 	<title>Yellow AutoHona</title>
-	
-	
 	<link rel="stylesheet" href="css/app.css" />
 	<link rel="stylesheet" href="css/searchbox.css"/>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js" type="text/javascript"></script>
@@ -14,57 +12,8 @@
 	<script src='js/angular-google-maps-min.js'></script>
 	<script src="js/app.js"></script>
 	<script src="js/mapModule.js"></script>
-	
-		
 </head>
 <body data-ng-controller="mapController">
-	
-	
-	
-	
-	<div>
-    <map destination="250 Gibraltar Rd Horsham PA" type="roadmap" marker-content="Toll Brothers"></map>
-	</div>
-   <!-- <div id="logo" style="position: absolute; z-index: 200; margin-left: 18%;">
-		<img src="images/logo.png" style="height: 40%; width: 50%;" >
-    </div>
-	
-    <div class="form-wrapper" style="position: absolute; z-index: 200;">
-		<autocompleteone locationsource=locationsource></autocompleteone>
-		<autocompletetwo locationdestination=locationdestination></autocompletetwo>
-		<input type="submit" data-ng-click="getDirections()" value="Search" id="submit">
-	</div>
-	
-	<div  id="map-canvas">
-		<google-map 
-			center="map.center" 
-			zoom="map.zoom" 
-			draggable="true"
-			latitude="latitude" 
-			longitude="longitude" 
-			options="map.options">
-			<marker coords="map.center"> </marker> 
-		</google-map>
-		
-		
-	</div>-->
- <style> 
- #theMap {
-    width:100%;
-    height:650px;
-    background:#ccc;
-    margin: 5px 0;
-}
-.mapContainer {
-    width:100%;
-    margin:5px;
-}
-img {
-    max-width: none;
-}
-#wrongAddress {
-    display:none;
-}
-</style>
+	<div><map></map></div>
 </body>
 </html>
